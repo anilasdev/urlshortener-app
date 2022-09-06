@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(#ff6666, #201367);
+  height: 1000px;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.url-list {
+  width: 80%;
+  padding: 35px;
+  background: #fbf9f9;
+  border-radius: 18px;
+  padding-bottom: 20px;
+}
+.url-list h2 {
+  text-align: center;
+  font-weight: normal;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #ff666621;
+}
+.urls {
+  margin-top: 2.6rem;
+  list-style: none;
+  max-height: 60vh;
+  overflow-y: scroll;
+}
+.url-list h2 span {
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 0.7rem;
+  margin-left: 3px;
+  margin-top: 0.2rem;
+}
+.url {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0px 5px 5px;
+  padding: 1.1rem 3rem;
+  background: #ff666621;
+  color: #101010;
+  border-radius: 5px;
+}
+.url input {
+  position: absolute;
+  visibility: hidden;
+}
+.url .box {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #101010;
+  text-align: center;
+  line-height: 48px;
+  font-size: 20px;
+  margin-right: 14px;
+  color: transparent;
+}
+.text {
+  font-size: 18px;
+}
+.url input:checked ~ .box {
+  transition: all 0.5s ease-in;
+  color: #ff6666;
+  border: 1px solid #ff6666;
+}
+.url input:checked ~ .text {
+  transition: all 0.5s ease-in;
+  text-decoration: line-through;
+  color: #ff6666;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.add {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.add div {
+  min-width: 100%;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+.add input,
+form button {
+  font-family: "Quicksand", sans-serif;
+  height: 3rem;
+}
+.add input {
+  flex-grow: 1;
+  border: none;
+  background: #ffffff;
+  padding: 0 1.5em;
+  border: 1px solid #ff6666;
+  font-size: initial;
+}
+.add button {
+  padding: 0 1.3rem;
+  border: none;
+  background: #ff6666;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-left: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+.badge {
+  padding: 4px 7px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  margin: 0 20px;
+}
+.badge-urgent {
+  color: #fff;
+  background-color: #ff6666;
+}
+.badge-normal {
+  color: #fff;
+  background-color: #201367;
+}
+.url-p {
+  margin: 0px 30px;
+  color: #676464;
+}
+.count {
+  font-size: 20px;
+}
+header {
+  text-align: center;
+}
+header h2 {
+  display: inline-block;
+}
+header img {
+  width: 50px;
+  height: 50px; 
+  margin-right: 10px;
+}
