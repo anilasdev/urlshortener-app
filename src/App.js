@@ -77,6 +77,7 @@ function App() {
                   </p>
                   <FaExternalLinkAlt
                     onClick={() => onVisitUrl(url.short_url)}
+                    className="external-link"
                   />
                 </div>
               ))

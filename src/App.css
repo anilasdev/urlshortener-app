@@ -47,7 +47,6 @@ body {
 .url {
   display: flex;
   align-items: center;
-  cursor: pointer;
   margin: 0px 5px 5px;
   padding: 1.1rem 3rem;
   background: #ff666621;
@@ -156,4 +155,7 @@ header img {
   width: 50px;
   height: 50px; 
   margin-right: 10px;
+}
+.external-link {
+  cursor: pointer;
 }
