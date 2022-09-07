@@ -2,7 +2,7 @@
 # Getting Started with URL shortener app
 
   
-The objective of this application is to provide a RESTFull API URL Shortener in Go.
+The objective of this application is to provide a demo of url shortener functionalities.
 
 It provides the following functionalities :
 
