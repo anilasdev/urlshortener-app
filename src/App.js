@@ -16,7 +16,6 @@ function App() {
 
   const getUrls = async (url) => {
     let urls = await fetchTinyUrls();
-    console.log(urls, "urls");
     if (urls.success) {
       setTinyUrls(urls.results);
     } else {
@@ -35,7 +34,6 @@ function App() {
       toast("Successfully created.");
       setInputUrl("");
     } else {
-      console.log(urlRes);
       toast.error(urlRes.message);
     }
   };
@@ -46,34 +44,35 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <div class="url-list container">
+      <div className="url-list container" >
         <header>
           <img src={Logo} alt="logo" className="logo" />
-          <h2>
+          <h2 data-testid="app-title">
             URL shortener <span>Get your big urls into short ones.</span>
           </h2>
         </header>
-        <div class="clearfix"></div>
-        <form class="add" onSubmit={handleSubmit}>
+        <div className="clearfix"></div>
+        <form className="add" onSubmit={handleSubmit}>
           <input
             type="text"
             name="url"
             id="new_url"
+            data-testid="app-input"
             placeholder="Provide the orignal URL here..."
             onChange={handleInputChange}
             value={inputUrl}
           />
-          <button type="submit">+ Create</button>
+          <button type="submit" data-testid="submit-button">+ Create</button>
         </form>
-        <div class="urls">
+        <div className="urls" data-testid="url-list">
           {tinyUrls.length
             ? tinyUrls.map((url) => (
-                <div class="url" key={url.url_id}>
+                <div className="url" key={url.url_id}>
                   <div style={{ flexGrow: 1 }}>
-                    <span class="text">{url.short_url}</span>
+                    <span className="text">{url.short_url}</span>
                   </div>
                   <p style={{ flexGrow: 1 }}>
-                    clicked <span class="count">{url.clicks}</span> time
+                    clicked <span className="count">{url.clicks}</span> time
                     {url.clicks === 1 ? "" : "s"}
                   </p>
                   <FaExternalLinkAlt
