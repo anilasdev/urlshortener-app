@@ -18,6 +18,5 @@
   "trailingComma": "es5",
   "useTabs": false,
   "vueIndentScriptAndStyle": false,
-  "filepath": "/Users/anilkumarmc/anil/url-shortner-app/src/App.test.js",
   "parser": "babel"
 }
