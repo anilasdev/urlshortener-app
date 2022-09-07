@@ -2,8 +2,13 @@
 # Getting Started with URL shortener app
 
   
+The objective of this application is to provide a RESTFull API URL Shortener in Go.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It provides the following functionalities :
+
+-   Shorten URL (with possible customization)
+-   Redirect to original URL when request short URL
+-   Provide the access count on a short URL
 
   
 
